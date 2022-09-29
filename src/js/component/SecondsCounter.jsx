@@ -17,15 +17,15 @@ const SecondsCounter = (prop) => {
   
     return (
         <>
-        <style></style>
+         <style></style>
         <div className="app d-flex justify-content-center">
         <div className="icon box"><i className="far fa-clock"></i></div>
-        <div className="counter box">0</div>
-        <div className="counter box">0</div>
-        <div className="counter box">0</div>
-        <div className="counter box">0</div>
-        <div className="counter box">0</div>
-        <div className="counter box">{seconds}</div>
+        <div className="counter box">{Math.floor(seconds/100000%10)}</div>
+        <div className="counter box">{Math.floor(seconds/10000%10)}</div>
+        <div className="counter box">{Math.floor(seconds/1000%10)}</div>
+        <div className="counter box">{Math.floor(seconds/100%10)}</div>
+        <div className="counter box">{Math.floor(seconds/10%10)}</div>
+        <div className="counter box">{Math.floor(seconds/1%10)}</div>
     </div>
     </>
     );
